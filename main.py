@@ -45,7 +45,6 @@ def ball_restart():
     #tp to center
     ball.center = (screen_width/2, screen_height/2)
     score += 1
-    score_opponent += 1
     #randomly select direction
     ball_speed_y *= random.choice((1, -1))
     ball_speed_x *= random.choice((1, -1))
@@ -117,12 +116,8 @@ while True: #updates game
 
     #scoreboard
     font = pygame.font.Font('fonts/CaviarDreams.ttf', 32)
-    text = font.render(f'Score: {score_opponent}', True, white)
-    screen.blit(text, (screen_width/1.99, screen_height/2)) #1.99 cus it Looks just a little bit better than 2
-
-    font2 = pygame.font.Font('fonts/CaviarDreams.ttf', 32)
-    text2 = font.render(f'Score: {score}', True, white)
-    screen.blit(text2, (screen_width/2.9, screen_height/2))
+    text = font.render(f'Score: {score}', True, white)
+    screen.blit(text, (screen_width/2.9, screen_height/2))
 
 
 
